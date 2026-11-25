@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Danielle Maria Lima · Nutricionista Oncológica, Clínica e Fitoterapia</title>
+<meta name="description" content="Danielle Maria Lima, nutricionista oncológica, clínica e fitoterapia (CRN-6 48006/P). Emagrecimento, saúde da mulher, nutrição esportiva e plano alimentar personalizado. Agende: (87) 99616-7636.">
+<meta name="theme-color" content="#742a6a">
+<meta property="og:type" content="website"><meta property="og:title" content="Danielle Maria Lima · Nutricionista"><meta property="og:description" content="Nutrição que transforma. Cuidado que acolhe."><meta property="og:image" content="img/dani-branco.jpg">
+<link rel="icon" type="image/png" href="img/marca.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/dani-branco-hero.jpg">
+<style>
+:root{
+  --paper:#f6f2ea;--paper2:#ece5d6;--ice:#eef2fa;--white:#fffdf8;
+  --navy:#2b3058;--navy2:#3d4475;--navy3:#565e95;--ink:#1d2140;--mut:#5d6183;--mut2:#8b8fab;
+  --red:#a33a3a;--red2:#c4524f;--sand:#e6d3ab;--sand2:#f3e7cd;
+  --ln-n:#3d4475;--ln-r:#a33a3a;--ln-s:#dcc596;--edge:#a9a9b4;
+  --serif:"DM Serif Display",Georgia,serif;--sans:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--ease2:cubic-bezier(.65,0,.35,1);
+  --pad:clamp(18px,5vw,72px);--max:1260px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.02em;line-height:1.05}
+em{font-style:italic}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.eyb{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:500}
+.eyb::before{content:"";width:34px;height:1px;background:currentColor}
+.sec{padding-block:clamp(88px,12vw,170px);position:relative}
+.h2{font-size:clamp(40px,6vw,86px)}
+.h2 em{color:var(--red)}
+.lead{font-size:clamp(17px,1.4vw,19.5px);color:var(--mut);max-width:56ch}
+
+/* logo */
+.logo .ed line{stroke:var(--edge);stroke-width:3.2;stroke-linecap:round}
+.logo.on-dark .ed line,.dark .logo .ed line{stroke:rgba(255,255,255,.42)}
+.dark{--ln-n:#cfd3ee}
+
+/* loader */
+.ld{position:fixed;inset:0;z-index:200;background:var(--navy);color:#fff;display:grid;place-items:center;transition:clip-path 1.1s var(--ease2);clip-path:inset(0 0 0 0)}
+.ld.out{clip-path:inset(0 0 100% 0)}
+.ld .in{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.ld-logo{width:118px;height:118px;--ln-n:#cfd3ee}
+.ld-logo .ed line{stroke:rgba(255,255,255,.5);stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s var(--ease) forwards}
+.ld-logo .ed line:nth-child(odd){animation-delay:.15s}
+.ld-logo .nd circle{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .6s var(--ease) forwards;animation-delay:calc(.35s + var(--i)*.06s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1)}}
+.ld b{font-family:var(--sans);font-weight:500;font-size:30px;letter-spacing:.01em}
+.ld small{display:block;font-size:12px;letter-spacing:.5em;text-transform:uppercase;opacity:.75;margin-top:4px}
+.ld .bar{width:200px;height:2px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.ld .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red2),var(--sand))}
+.ld .pc{font-family:var(--serif);font-style:italic;font-size:15px;opacity:.8;font-variant-numeric:tabular-nums}
+
+/* cursor */
+.cur,.cur2{position:fixed;left:0;top:0;pointer-events:none;z-index:150;border-radius:50%;transform:translate3d(-100px,-100px,0)}
+.cur{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--red)}
+.cur2{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid rgba(43,48,88,.45);display:grid;place-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s}
+.cur2 span{opacity:0;transition:opacity .2s}
+.cur2.lk{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(163,58,58,.12);border-color:var(--red)}
+.cur2.vw{width:88px;height:88px;margin:-44px 0 0 -44px;background:var(--navy);border-color:var(--navy)}
+.cur2.vw span{opacity:1}
+@media(hover:none),(pointer:coarse){.cur,.cur2{display:none}}
+
+/* progresso + header */
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--sand));z-index:120}
+.hd{position:fixed;inset:0 0 auto;z-index:100;transition:transform .5s var(--ease),background .4s,box-shadow .4s;padding-top:env(safe-area-inset-top,0px)}
+.hd.sc{background:rgba(246,242,234,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(43,48,88,.08)}
+.hd.hide{transform:translateY(-110%)}
+.hd .in{display:flex;align-items:center;gap:24px;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.brand .logo{width:40px;height:40px;flex:none}
+.brand b{display:block;font-weight:500;font-size:19px;line-height:1;letter-spacing:.01em}
+.brand small{display:block;font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--mut);margin-top:5px}
+.nav{margin-left:auto;display:flex;gap:4px}
+.nav a{text-decoration:none;font-size:14.5px;color:var(--mut);padding:8px 12px;border-radius:999px;position:relative;transition:color .25s}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav a:hover{color:var(--navy)}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1);transform-origin:left}
+.nav a.on{color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:15px 26px;font-size:15.5px;font-weight:500;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--ease),box-shadow .35s,color .35s,background .35s;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn:hover::before{transform:none}
+.btn.p{background:var(--navy);color:#fff;box-shadow:0 18px 36px -18px rgba(43,48,88,.8)}
+.btn.p::before{background:var(--red)}
+.btn.r{background:var(--red);color:#fff;box-shadow:0 18px 36px -18px rgba(163,58,58,.8)}
+.btn.r::before{background:var(--navy)}
+.btn.o{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1px rgba(43,48,88,.3)}
+.btn.o::before{background:var(--navy)}
+.btn.o:hover{color:#fff}
+.btn.w{background:#fff;color:var(--navy)}
+.btn.w::before{background:var(--sand)}
+.btn.ow{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.btn.ow::before{background:rgba(255,255,255,.12)}
+.btn.sm{padding:11px 18px;font-size:14px}
+.mbtn{display:none;margin-left:auto;width:46px;height:46px;border-radius:50%;border:0;background:var(--navy);color:#fff;place-items:center;cursor:pointer}
+.mbtn i,.mbtn i::before,.mbtn i::after{display:block;width:18px;height:1.6px;background:currentColor;border-radius:2px;position:relative;transition:transform .4s var(--ease),background .2s}
+.mbtn i::before,.mbtn i::after{content:"";position:absolute;left:0}
+.mbtn i::before{top:-6px}.mbtn i::after{top:6px}
+.mopen .mbtn i{background:transparent}
+.mopen .mbtn i::before{transform:translateY(6px) rotate(45deg)}
+.mopen .mbtn i::after{transform:translateY(-6px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:99;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:110px var(--pad) 40px;clip-path:circle(0 at calc(100% - 44px) 40px);transition:clip-path .8s var(--ease2);visibility:hidden}
+.mopen .mnav{clip-path:circle(150% at calc(100% - 44px) 40px);visibility:visible}
+.mopen .hd .brand{color:#fff}.mopen .hd .brand small{color:rgba(255,255,255,.6)}
+.mopen .hd{background:transparent;box-shadow:none;backdrop-filter:none}
+.mopen .hd .mbtn{background:#fff;color:var(--navy)}
+.mnav a.l{font-family:var(--serif);font-size:clamp(34px,9vw,50px);text-decoration:none;line-height:1.25;display:block;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .6s var(--ease)}
+.mnav a.l em{color:var(--sand)}
+.mopen .mnav a.l{opacity:1;transform:none}
+.mopen .mnav a.l:nth-child(2){transition-delay:.05s}.mopen .mnav a.l:nth-child(3){transition-delay:.1s}.mopen .mnav a.l:nth-child(4){transition-delay:.15s}.mopen .mnav a.l:nth-child(5){transition-delay:.2s}.mopen .mnav a.l:nth-child(6){transition-delay:.25s}
+.mnav .mft{margin-top:36px;display:flex;flex-direction:column;gap:6px;color:rgba(255,255,255,.65);font-size:14.5px}
+@media(max-width:1020px){.nav,.hd .in>.btn{display:none}.mbtn{display:grid}}
+
+/* hero */
+.hero{min-height:100svh;padding-top:120px;padding-bottom:70px;position:relative;overflow:hidden;background:radial-gradient(120% 80% at 85% 10%,var(--ice) 0,rgba(238,242,250,0) 60%),var(--paper)}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(30px,5vw,80px);align-items:center;min-height:calc(100svh - 190px)}
+.hero h1{font-size:clamp(50px,7vw,112px);color:var(--navy);font-weight:300;line-height:.98;margin:26px 0 0}
+.hero h1 em{color:var(--red);font-weight:400}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.04em .02em .12em;margin:-.04em -.02em -.12em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--ease)}
+.go .hero h1 .w>span{transform:none}
+.sig{display:flex;align-items:center;gap:12px;margin-top:22px;color:var(--mut);font-size:14.5px}
+.sig::before{content:"";width:28px;height:1px;background:var(--red)}
+.sig b{font-weight:500;color:var(--navy)}
+.hero .lead{margin:26px 0 34px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px rgba(43,48,88,.1);font-size:13.5px;color:var(--navy);backdrop-filter:blur(6px)}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.chip:nth-child(2) i{background:var(--navy2)}.chip:nth-child(3) i{background:#c7a967}
+.hv{position:relative;justify-self:center;width:min(100%,500px);perspective:1200px}
+.hv .frame{position:relative;transform-style:preserve-3d;transition:transform .9s var(--ease)}
+.hv .ph{position:relative;border-radius:260px 260px 28px 28px;overflow:hidden;aspect-ratio:4/5.3;box-shadow:0 60px 90px -50px rgba(43,48,88,.6);clip-path:inset(100% 0 0 0 round 260px 260px 28px 28px);transition:clip-path 1.5s var(--ease2) .2s;background:var(--paper2)}
+.go .hv .ph{clip-path:inset(0 0 0 0 round 260px 260px 28px 28px)}
+.hv .ph img{width:100%;height:100%;object-fit:cover;object-position:52% 28%;transform:scale(1.18);transition:transform 2.2s var(--ease) .2s}
+.go .hv .ph img{transform:scale(1.02)}
+.hv .arc{position:absolute;inset:-16px -16px auto -16px;height:calc(100% + 32px);border-radius:276px 276px 40px 40px;border:1px solid rgba(43,48,88,.22);z-index:-1;transform:translateZ(-40px)}
+.hv .arc2{position:absolute;right:-34px;top:16%;width:120px;height:120px;border-radius:50%;background:var(--sand);opacity:.65;z-index:-1;filter:blur(1px);transform:translateZ(-80px)}
+.badge{position:absolute;display:flex;align-items:center;gap:12px;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px;padding:12px 16px;box-shadow:0 24px 50px -26px rgba(29,33,64,.55);transform:translateZ(60px);opacity:0;transition:opacity .8s .9s,translate .9s var(--ease) .9s;translate:0 18px}
+.go .badge{opacity:1;translate:0 0}
+.badge .logo{width:42px;height:42px;flex:none}
+.badge b{display:block;color:var(--navy);font-weight:500;font-size:15.5px;line-height:1.15}
+.badge small{display:block;color:var(--mut);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.badge.b1{left:-34px;bottom:12%}
+.badge.b2{right:-26px;top:9%;transition-delay:1.1s}
+.badge.b2 .ic{width:40px;height:40px;border-radius:12px;background:var(--red);color:#fff;display:grid;place-items:center}
+.badge.b2 .ic svg{width:20px;height:20px}
+.scrl{position:absolute;left:50%;bottom:22px;z-index:2;translate:-50% 0;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.scrl i{width:1px;height:46px;background:linear-gradient(var(--navy),transparent);position:relative;overflow:hidden}
+.scrl i::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--red);animation:sd 2s var(--ease2) infinite}
+@keyframes sd{to{top:110%}}
+@media(max-width:900px){
+  .hero{padding-top:104px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:56px}
+  .hv{width:min(88%,420px)}
+  .badge.b1{left:-18px}.badge.b2{right:-14px}
+  .scrl{display:none}
+}
+
+/* faixa */
+.band{background:var(--navy);color:#fff;overflow:hidden;padding:26px 0;position:relative;z-index:2}
+.bandw{overflow:hidden;padding-block:34px;margin-block:-34px;position:relative;z-index:2}
+.band.tilt{transform:rotate(-2deg) scale(1.04);background:var(--red)}
+.mq{display:flex;gap:0;white-space:nowrap;width:max-content;animation:mq 38s linear infinite}
+.band.tilt .mq{animation-direction:reverse;animation-duration:44s}
+.mq span{font-family:var(--serif);font-size:clamp(28px,3.6vw,48px);font-weight:300;display:inline-flex;align-items:center;gap:34px;padding-right:34px}
+.mq span:nth-child(even){font-style:italic;color:var(--sand)}
+.band.tilt .mq span:nth-child(even){color:#fff;opacity:.8}
+.mq i{width:12px;height:12px;border-radius:50%;background:var(--red2);flex:none}
+.band.tilt .mq i{background:var(--sand)}
+.mq span:nth-child(3n) i{background:var(--sand)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1s var(--ease),transform 1.2s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.mask{clip-path:inset(0 0 100% 0);transition:clip-path 1.4s var(--ease2)}
+.mask.in{clip-path:inset(0 0 0 0)}
+.mask img{transform:scale(1.25);transition:transform 2s var(--ease)}
+.mask.in img{transform:scale(1)}
+
+/* sobre */
+.sobre{background:var(--white)}
+.sobre .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,7vw,110px);align-items:center}
+.sobre .pic{position:relative}
+.sobre .pic .im{border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.sobre .pic .im img{width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+.sobre .pic .tag{position:absolute;right:-22px;bottom:34px;background:var(--navy);color:#fff;border-radius:18px;padding:18px 20px;max-width:240px;box-shadow:0 30px 60px -30px rgba(29,33,64,.8)}
+.sobre .pic .tag q{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.3;quotes:"“" "”";display:block}
+.sobre .pic .tag small{display:block;margin-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
+.sobre .pic .dots{position:absolute;left:-40px;top:-40px;width:150px;height:150px;opacity:.9;z-index:-0}
+.sobre h2{margin:20px 0 26px}
+.sobre p{color:var(--mut);margin:0 0 16px;max-width:58ch}
+.facts{display:grid;gap:12px;margin-top:34px}
+.fact{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:center;padding:18px 20px;border-radius:18px;background:var(--paper);box-shadow:inset 0 0 0 1px rgba(43,48,88,.07);transition:transform .5s var(--ease),box-shadow .4s,background .4s}
+.fact:hover{transform:translateX(8px);background:#fff;box-shadow:inset 0 0 0 1px rgba(163,58,58,.3),0 20px 40px -26px rgba(29,33,64,.35)}
+.fact .n{width:54px;height:54px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:22px}
+.fact:nth-child(2) .n{background:var(--red)}
+.fact:nth-child(3) .n{background:var(--sand);color:var(--navy)}
+.fact b{display:block;color:var(--navy);font-weight:500;font-size:17.5px}
+.fact span{display:block;color:var(--mut);font-size:14.5px;line-height:1.45}
+@media(max-width:900px){.sobre .g{grid-template-columns:1fr}.sobre .pic{max-width:520px}.sobre .pic .tag{right:12px}}
+
+/* citação */
+.quote{background:var(--navy);color:#fff;overflow:hidden}
+.quote .g{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(30px,6vw,90px);align-items:center}
+.quote .eyb{color:var(--sand)}
+.qt{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,64px);line-height:1.14;margin:26px 0 0;letter-spacing:-.015em}
+.qt .wd{color:rgba(255,255,255,.18);transition:color .4s}
+.qt .wd.on{color:#fff}
+.qt .wd.hl.on{color:var(--red2);font-style:italic}
+.quote .who{display:flex;align-items:center;gap:14px;margin-top:34px;color:rgba(255,255,255,.7);font-size:14.5px}
+.quote .who .logo{width:40px;height:40px}
+.quote .post{border-radius:22px;overflow:hidden;box-shadow:0 50px 80px -40px rgba(0,0,0,.6);rotate:3deg;transition:rotate .8s var(--ease)}
+.quote .post:hover{rotate:0deg}
+.quote .post img{width:100%}
+.quote .bgnet{position:absolute;right:-120px;top:-80px;width:520px;opacity:.06;pointer-events:none}
+@media(max-width:900px){.quote .g{grid-template-columns:1fr}.quote .post{max-width:360px}}
+
+/* psicanálise (trilha horizontal) */
+.psi{background:var(--paper)}
+.psi .top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.psi .top .lead{margin:0}
+.hz{position:relative}
+.hz .stk{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.track{display:flex;gap:26px;padding-inline:var(--pad);will-change:transform}
+.card{flex:none;width:min(440px,78vw);min-height:420px;border-radius:28px;padding:34px;display:flex;flex-direction:column;position:relative;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px rgba(43,48,88,.08)}
+.card:nth-child(2){background:var(--navy);color:#fff}
+.card:nth-child(3){background:var(--sand2)}
+.card:nth-child(4){background:var(--red);color:#fff}
+.card:nth-child(5){background:var(--ice)}
+.card .num{font-family:var(--serif);font-style:italic;font-size:110px;line-height:.8;font-weight:300;opacity:.18;position:absolute;right:26px;top:24px}
+.card small{font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.7}
+.card h3{font-size:clamp(30px,3vw,42px);margin:14px 0 14px}
+.card p{margin:0;opacity:.82;font-size:16px}
+.card .logo{margin-top:auto;width:84px;height:84px;opacity:.95}
+.card:nth-child(2) .logo,.card:nth-child(4) .logo{--ln-n:#fff;--ln-s:var(--sand)}
+.card:nth-child(2) .logo .ed line,.card:nth-child(4) .logo .ed line{stroke:rgba(255,255,255,.4)}
+.card:nth-child(4) .logo{--ln-r:#ffd8cc}
+.hz .bar{margin:44px var(--pad) 0;height:2px;background:rgba(43,48,88,.12);border-radius:2px;overflow:hidden;max-width:var(--max)}
+.hz .bar i{display:block;height:100%;width:0;background:var(--red)}
+@media(max-width:900px){
+  .hz{height:auto!important}
+  .hz .stk{position:static;height:auto;overflow:visible}
+  .track{flex-direction:column;transform:none!important;padding-inline:var(--pad)}
+  .card{width:100%;min-height:0}
+  .card .logo{margin-top:26px;width:64px;height:64px}
+  .hz .bar{display:none}
+}
+
+/* quando procurar */
+.qp{background:var(--white)}
+.qp .g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,6vw,90px)}
+.qp .sticky{position:sticky;top:120px;align-self:start}
+.qp h2{margin:20px 0 22px}
+.list{border-top:1px solid rgba(43,48,88,.14)}
+.it{border-bottom:1px solid rgba(43,48,88,.14);padding:26px 4px;display:grid;grid-template-columns:56px 1fr 30px;gap:18px;align-items:start;cursor:default;position:relative}
+.it .n{font-family:var(--serif);font-style:italic;color:var(--red);font-size:20px;padding-top:4px}
+.it h3{font-size:clamp(24px,2.4vw,34px);color:var(--navy);transition:transform .6s var(--ease),color .3s}
+.it p{margin:10px 0 0;color:var(--mut);max-width:52ch;font-size:16px}
+.it .ar{width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(43,48,88,.25);display:grid;place-items:center;margin-top:6px;transition:background .3s,transform .5s var(--ease)}
+.it .ar svg{width:14px;height:14px}
+.it:hover h3{transform:translateX(10px);color:var(--red)}
+.it:hover .ar{background:var(--red);color:#fff;transform:rotate(-45deg);box-shadow:none}
+.fimg{position:fixed;left:0;top:0;width:250px;height:310px;border-radius:20px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate3d(-999px,-999px,0) scale(.8) rotate(-4deg);transition:opacity .3s,scale .4s var(--ease);box-shadow:0 40px 70px -30px rgba(29,33,64,.6)}
+.fimg.on{opacity:1}
+.fimg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+@media(max-width:900px){.qp .g{grid-template-columns:1fr}.qp .sticky{position:static}.it{grid-template-columns:40px 1fr}.it .ar{display:none}.fimg{display:none}}
+
+/* consultório */
+.esp{background:var(--paper);overflow:hidden}
+.esp .top{text-align:center;max-width:760px;margin:0 auto 60px}
+.esp .top .eyb{justify-content:center}
+.esp .top .eyb::after{content:"";width:34px;height:1px;background:currentColor}
+.esp .top h2{margin:20px 0 20px}
+.esp .top .lead{margin:0 auto}
+.big{position:relative;border-radius:30px;overflow:hidden;height:clamp(380px,72vh,720px);cursor:zoom-in}
+.big img{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover;object-position:50% 55%}
+.big .cap{position:absolute;left:28px;bottom:26px;background:rgba(255,253,248,.92);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;color:var(--navy);font-size:14.5px;max-width:min(360px,calc(100% - 56px))}
+.big .cap b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+.gal{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:18px}
+.gal button{border:0;padding:0;border-radius:24px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/5;background:var(--paper2);position:relative}
+.gal button img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.gal button:hover img{transform:scale(1.06)}
+.gal button:nth-child(2){translate:0 40px}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal button:nth-child(3){display:none}.gal button:nth-child(2){translate:0 24px}.big .cap{left:16px;bottom:16px}}
+
+/* instagram */
+.ig{background:linear-gradient(180deg,var(--white),var(--ice));overflow:hidden}
+.ig .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(30px,6vw,90px);align-items:center}
+.ig h2{margin:20px 0 22px}
+.prof{margin-top:34px;background:#fff;border-radius:26px;padding:24px;box-shadow:0 40px 80px -50px rgba(29,33,64,.5),inset 0 0 0 1px rgba(43,48,88,.06);max-width:470px;text-decoration:none;display:block;transition:transform .6s var(--ease),box-shadow .5s}
+.prof:hover{transform:translateY(-6px);box-shadow:0 50px 90px -50px rgba(29,33,64,.6),inset 0 0 0 1px rgba(163,58,58,.25)}
+.prof .row{display:flex;align-items:center;gap:18px}
+.ring{width:92px;height:92px;border-radius:50%;padding:4px;background:conic-gradient(from 210deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5,#feda75);flex:none;animation:spin 8s linear infinite}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #fff;animation:spin 8s linear infinite reverse}
+@keyframes spin{to{rotate:360deg}}
+.prof .hn{font-weight:500;color:var(--ink);font-size:17px;display:flex;align-items:center;gap:8px}
+.prof .hn svg{width:18px;height:18px}
+.prof .nm{color:var(--mut);font-size:14.5px}
+.prof ul{list-style:none;margin:18px 0 0;padding:0;font-size:15px;color:var(--ink);line-height:1.55}
+.prof ul li{display:flex;gap:8px}
+.prof ul li i{color:#e07a2f;font-style:normal}
+.prof .act{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.prof .act span{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:11px;font-size:14.5px;font-weight:500}
+.prof .act span:first-child{background:linear-gradient(90deg,#d62976,#fa7e1e);color:#fff}
+.prof .act span:last-child{background:var(--paper);color:var(--navy)}
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;perspective:1000px}
+.posts .post{display:block;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -46px rgba(29,33,64,.65);text-decoration:none;transform-style:preserve-3d;transition:transform .5s var(--ease)}
+.posts .post:nth-child(2){margin-top:70px}
+.post .ph{position:relative;aspect-ratio:4/5;overflow:hidden}
+.post .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.post .bt{display:flex;align-items:center;gap:10px;padding:12px 14px;font-size:13.5px;color:var(--ink)}
+.post .bt img{width:28px;height:28px;border-radius:50%}
+.post .bt b{font-weight:500}
+.post .bt svg{width:18px;height:18px;margin-left:auto;color:var(--red)}
+@media(max-width:900px){.ig .g{grid-template-columns:1fr}.posts{gap:14px}.posts .post:nth-child(2){margin-top:40px}}
+
+/* passos */
+.ps{background:var(--navy);color:#fff;overflow:hidden}
+.ps .eyb{color:var(--sand)}
+.ps h2{margin:20px 0 0}
+.ps h2 em{color:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:35px;height:1px;background:rgba(255,255,255,.16)}
+.st{position:relative}
+.st .dot{width:70px;height:70px;border-radius:50%;background:var(--navy2);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:26px;position:relative;box-shadow:0 0 0 8px var(--navy);transition:background .4s,transform .6s var(--ease)}
+.st:hover .dot{background:var(--red);transform:scale(1.08)}
+.st:nth-child(2) .dot{background:var(--red)}
+.st:nth-child(3) .dot{background:var(--sand);color:var(--navy)}
+.st h3{font-size:30px;margin:28px 0 12px}
+.st p{margin:0;color:rgba(255,255,255,.72);max-width:34ch}
+.ps .cta{margin-top:56px;display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.steps{grid-template-columns:1fr;gap:34px}.steps::before{left:35px;right:auto;top:0;bottom:0;width:1px;height:auto}.st{display:grid;grid-template-columns:70px 1fr;gap:0 22px}.st h3{margin:8px 0 8px}.st>div:last-child{grid-column:2}}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq .g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(30px,6vw,90px)}
+.faq h2{margin:20px 0 22px}
+.qa{border-bottom:1px solid rgba(43,48,88,.14)}
+.qa:first-child{border-top:1px solid rgba(43,48,88,.14)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:0;padding:26px 0;text-align:left;cursor:pointer;font-family:var(--serif);font-size:clamp(21px,2vw,27px);color:var(--navy)}
+.qa button i{width:38px;height:38px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(43,48,88,.25);position:relative;transition:background .3s,transform .5s var(--ease)}
+.qa button i::before,.qa button i::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:currentColor;translate:-50% -50%}
+.qa button i::after{rotate:90deg;transition:rotate .4s var(--ease)}
+.qa.op button i{background:var(--red);color:#fff;box-shadow:none}
+.qa.op button i::after{rotate:0deg}
+.qa .an{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.qa.op .an{grid-template-rows:1fr}
+.qa .an>div{overflow:hidden}
+.qa .an p{margin:0 0 26px;color:var(--mut);max-width:62ch}
+@media(max-width:900px){.faq .g{grid-template-columns:1fr}}
+
+/* contato */
+.ct{background:var(--ink);color:#fff;overflow:hidden}
+.ct .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:stretch}
+.ct .eyb{color:var(--sand)}
+.ct h2{font-size:clamp(48px,7.4vw,110px);margin:22px 0 26px}
+.ct h2 em{color:var(--red2)}
+.ct .lead{color:rgba(255,255,255,.7)}
+.inf{display:grid;gap:12px;margin:34px 0}
+.inf a,.inf div{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);text-decoration:none;transition:background .3s,transform .5s var(--ease)}
+.inf a:hover{background:rgba(255,255,255,.1);transform:translateX(6px)}
+.inf .ic{width:46px;height:46px;border-radius:14px;background:var(--red);display:grid;place-items:center;flex:none}
+.inf div .ic{background:var(--navy2)}
+.inf .ic svg{width:21px;height:21px}
+.inf small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.inf b{display:block;font-weight:500;font-size:17px}
+.ct .cta{display:flex;flex-wrap:wrap;gap:10px}
+.map{border-radius:26px;overflow:hidden;min-height:420px;background:#2a2e4f;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.05)}
+@media(max-width:900px){.ct .g{grid-template-columns:1fr}.map{min-height:340px}}
+
+/* rodapé */
+.ft{background:var(--ink);color:rgba(255,255,255,.7);padding:0 0 calc(110px + env(safe-area-inset-bottom,0px));overflow:hidden}
+.ft .huge{font-family:var(--serif);font-weight:300;font-size:clamp(64px,15vw,230px);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.2);white-space:nowrap;letter-spacing:-.03em;padding:40px 0 30px;border-top:1px solid rgba(255,255,255,.08)}
+.ft .huge em{-webkit-text-stroke:1px rgba(196,82,79,.6)}
+.ft .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;font-size:14.5px}
+.ft .cols b{display:block;color:#fff;font-weight:500;margin-bottom:12px;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.ft .cols a{display:block;text-decoration:none;padding:3px 0;transition:color .2s}
+.ft .cols a:hover{color:var(--sand)}
+.ft .brand{color:#fff}.ft .brand small{color:rgba(255,255,255,.5)}
+.ft .cvv{margin:44px 0 0;padding:18px 20px;border-radius:16px;background:rgba(196,82,79,.12);color:#f1c9c4;font-size:14px}
+.ft .cp{margin-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.45)}
+@media(max-width:800px){.ft .cols{grid-template-columns:1fr 1fr}.ft .cols>div:first-child{grid-column:1/-1}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:160;background:rgba(18,20,40,.94);display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .4s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:min(1100px,100%);max-height:86vh;border-radius:18px;transform:scale(.94);transition:transform .6s var(--ease)}
+.lb.on img{transform:none}
+.lb button{position:absolute;border:0;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:24px;cursor:pointer;display:grid;place-items:center}
+.lb .x{top:max(18px,env(safe-area-inset-top,0px));right:18px}
+.lb .pv{left:18px;top:50%;translate:0 -50%}.lb .nx{right:18px;top:50%;translate:0 -50%}
+
+/* flutuantes: tudo à esquerda */
+.waf{position:fixed;left:max(18px,env(safe-area-inset-left,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:90;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 18px 36px -14px rgba(37,211,102,.8);text-decoration:none;transition:transform .4s var(--ease)}
+.waf:hover{transform:scale(1.08)}
+.waf svg{width:30px;height:30px}
+.waf::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:pl 2.4s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.aib{position:fixed;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 74px);z-index:90;display:flex;align-items:center;gap:10px;border:0;cursor:pointer;background:var(--navy);color:#fff;border-radius:999px;padding:6px 16px 6px 6px;box-shadow:0 18px 36px -16px rgba(29,33,64,.8);transition:transform .4s var(--ease)}
+.aib:hover{transform:translateY(-3px)}
+.aib img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.aib span{font-size:14px;font-weight:500}
+.aib i{position:absolute;left:36px;top:6px;width:11px;height:11px;border-radius:50%;background:#3ddc84;border:2px solid var(--navy)}
+.tip{position:fixed;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 142px);z-index:90;max-width:260px;background:#fff;color:var(--ink);border-radius:16px 16px 16px 4px;padding:12px 34px 12px 14px;font-size:14px;line-height:1.45;box-shadow:0 24px 50px -24px rgba(29,33,64,.6);opacity:0;translate:0 12px;transition:opacity .5s,translate .6s var(--ease);pointer-events:none}
+.tip.on{opacity:1;translate:0 0;pointer-events:auto}
+.tip button{position:absolute;right:6px;top:6px;border:0;background:none;cursor:pointer;color:var(--mut2);font-size:18px;line-height:1;width:24px;height:24px}
+.ai{position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:calc(max(14px,env(safe-area-inset-bottom,0px)) + 140px);z-index:110;width:min(380px,calc(100vw - 28px));height:min(560px,calc(100svh - 170px));background:#fff;border-radius:24px;box-shadow:0 40px 90px -30px rgba(29,33,64,.6);display:flex;flex-direction:column;overflow:hidden;transform-origin:0 100%;scale:.9;opacity:0;pointer-events:none;transition:scale .5s var(--ease),opacity .3s}
+.ai.on{scale:1;opacity:1;pointer-events:auto}
+.ai .h{background:var(--navy);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.ai .h img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.ai .h b{display:block;font-weight:500}
+.ai .h small{display:block;font-size:12px;opacity:.7}
+.ai .h button{margin-left:auto;border:0;background:rgba(255,255,255,.12);color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.ai .m{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--paper)}
+.ai .b{max-width:86%;padding:11px 14px;border-radius:16px;font-size:14.5px;line-height:1.5}
+.ai .b.bo{background:#fff;border-bottom-left-radius:4px;box-shadow:0 4px 14px -10px rgba(29,33,64,.4)}
+.ai .b.us{background:var(--navy);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.ai .b.al{background:#fff1ef;color:#7d2523;box-shadow:inset 0 0 0 1px #f1c9c4}
+.ai .b a.w{display:inline-flex;margin-top:8px;background:#25d366;color:#fff;text-decoration:none;padding:7px 12px;border-radius:999px;font-size:13.5px;font-weight:500}
+.ai .b a.t{display:inline-flex;margin:8px 6px 0 0;background:var(--red);color:#fff;text-decoration:none;padding:7px 12px;border-radius:999px;font-size:13.5px;font-weight:500}
+.ai .sg{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px 0;background:#fff}
+.ai .sg button{border:0;background:var(--paper);color:var(--navy);border-radius:999px;padding:7px 12px;font-size:13px;cursor:pointer}
+.ai form{display:flex;gap:8px;padding:10px 12px 12px;background:#fff}
+.ai input{flex:1;min-width:0;border:1px solid rgba(43,48,88,.15);border-radius:999px;padding:11px 15px;font:inherit;font-size:14.5px;outline:none}
+.ai input:focus{border-color:var(--navy)}
+.ai form button{border:0;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;cursor:pointer;display:grid;place-items:center}
+.ai form button svg{width:18px;height:18px}
+.ai .ty span{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mut2);margin-right:3px;animation:ty 1s infinite}
+.ai .ty span:nth-child(2){animation-delay:.15s}.ai .ty span:nth-child(3){animation-delay:.3s}
+@keyframes ty{50%{transform:translateY(-4px)}}
+@media(max-width:600px){.aib{padding:6px}.aib span{display:none}.tip{bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 136px);max-width:230px}.prof .act{grid-template-columns:1fr}.prof{padding:20px}.ring{width:78px;height:78px}}
+.posts .post .bt b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}.mask{clip-path:none}}
+
+/* componentes comuns */
+.ld-logo{width:min(300px,70vw);height:auto;animation:pop .9s var(--ease) both}
+.brand .mk{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;box-shadow:0 8px 20px -12px rgba(0,0,0,.4)}
+.brand .mk img{width:74%;height:auto}
+.areas .top,.mulher .top{max-width:820px;margin-bottom:50px}
+.areas .top .h2,.mulher .top .h2{margin:18px 0 20px}
+.ar-g{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ar-c{position:relative;padding:26px 22px;border-radius:22px;transition:transform .6s var(--ease),box-shadow .5s,background .4s;overflow:hidden}
+.ar-c:hover{transform:translateY(-8px)}
+.ar-i{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px}
+.ar-i svg{width:26px;height:26px}
+.ar-n{position:absolute;right:18px;top:16px;font-size:13px;font-weight:600;opacity:.4}
+.ar-c h3{font-size:20px;line-height:1.15;margin-bottom:8px}
+.ar-c p{margin:0;font-size:14.5px;line-height:1.5;opacity:.75}
+@media(max-width:1100px){.ar-g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.ar-g{grid-template-columns:1fr 1fr}.ar-c{padding:20px 16px}.ar-c h3{font-size:17px}}
+@media(max-width:420px){.ar-g{grid-template-columns:1fr}}
+.vals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+.vals span{display:block;font-size:14px;line-height:1.45;opacity:.82;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.vals b{display:block;font-size:15.5px;margin-bottom:2px;opacity:1}
+.quote .post{cursor:zoom-in}
+.quote .post img{aspect-ratio:4/5;object-fit:cover;object-position:50% 15%}
+.fz{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fz-c{padding:28px 24px;border-radius:22px;transition:transform .6s var(--ease)}
+.fz-c:hover{transform:translateY(-6px)}
+.fz-c span{display:block;font-size:44px;line-height:1;margin-bottom:18px;opacity:.9}
+.fz-c b{display:block;font-size:22px;margin-bottom:6px}
+.fz-c p{margin:0;font-size:15px;opacity:.78}
+@media(max-width:900px){.fz{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.fz{grid-template-columns:1fr}}
+.endo{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 32px;border-radius:24px;flex-wrap:wrap}
+.endo b{display:block;font-size:24px;margin-bottom:6px}
+.endo p{margin:0;max-width:66ch;opacity:.85}
+.esp .top{text-align:center;max-width:760px;margin:0 auto 46px}
+.esp .top .eyb{justify-content:center}
+.esp .top .h2{margin-top:18px}
+.gal4{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px}
+.gal4 button{border:0;padding:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:#ddd}
+.gal4 button:first-child{grid-row:span 2}
+.gal4 button:nth-child(4){grid-column:span 2}
+.gal4 img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 1.2s var(--ease)}
+.gal4 button:hover img{transform:scale(1.06)}
+@media(max-width:800px){.gal4{grid-template-columns:1fr 1fr;grid-template-rows:240px 200px 200px}.gal4 button:first-child{grid-row:span 1;grid-column:span 2}.gal4 button:nth-child(4){grid-column:span 2}}
+.flogo{width:min(320px,100%);height:auto}
+.ft .cols .brand{display:none}
+.inf b{overflow-wrap:anywhere}
+.aib img,.ai .h img{object-position:50% 15%}
+.ring img,.posts .post .bt img{object-position:50% 15%}
+.hvid video,.hv .ph video{width:100%;height:100%;object-fit:cover;display:block}
+.ft .huge{white-space:normal;line-height:1}
+
+:root{--paper:#fbf8f3;--paper2:#f1ebe0;--ice:#f4f9ec;--white:#ffffff;--navy:#742a6a;--navy2:#8e3a83;--ink:#2a1b29;--mut:#6b6070;--mut2:#9c93a0;--red:#f06b6b;--red2:#ff8c8c;--sand:#8cc63f;--sand2:#eaf6d9;--grape:#742a6a;--lime:#8cc63f;--coral:#f06b6b;--sun:#f6b23b}
+body{font-weight:400}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+.h2 em{color:var(--coral);font-style:italic}.dark .h2 em,.ct h2 em{color:var(--lime)}
+.eyb{color:var(--grape);font-weight:800;letter-spacing:.2em}.eyb::before{background:var(--lime);height:3px;border-radius:3px;width:28px}
+.dark .eyb{color:var(--lime)}
+.ld{background:#fff;color:var(--grape)}.ld .bar{background:rgba(116,42,106,.12)}.ld .bar i{background:linear-gradient(90deg,var(--coral),var(--lime))}.ld .pc{color:var(--grape)}
+.brand{color:var(--grape)}.brand b{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:0}.brand small{color:#5f9a1f}
+.brand .mk{background:var(--ice);box-shadow:none}
+.btn{border-radius:999px;font-weight:800}
+.btn.r{background:var(--coral);color:#fff;box-shadow:0 18px 36px -16px rgba(240,107,107,.8)}.btn.r::before{background:var(--grape)}
+.btn.o{color:var(--grape);box-shadow:inset 0 0 0 2px rgba(116,42,106,.25)}.btn.o::before{background:var(--grape)}
+.btn.p{background:var(--grape)}.btn.p::before{background:var(--coral)}
+.hero{background:radial-gradient(60% 60% at 80% 40%,#eef8e2 0,rgba(238,248,226,0) 70%),radial-gradient(50% 50% at 10% 90%,#ffe6e6,rgba(255,230,230,0) 70%),#fff}
+.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.hlogo{width:min(200px,60%);height:auto;margin:0 0 10px -10px}
+.hero h1{color:var(--grape);font-size:clamp(48px,6vw,94px);line-height:1}
+.hero h1 em{color:var(--coral)}
+.hv{width:min(100%,520px)}
+.hv .ph{border-radius:50%;aspect-ratio:1;clip-path:circle(0% at 50% 50%);border:10px solid #fff;box-shadow:0 50px 90px -40px rgba(116,42,106,.55)}
+.go .hv .ph{clip-path:circle(50% at 50% 50%)}
+.hv .ph video{object-position:50% 12%}
+.hv .arc{inset:-6%;width:auto;height:auto;border-radius:50%;border:3px dashed rgba(140,198,63,.7);animation:spin 50s linear infinite}
+.hv .arc2{width:150px;height:150px;right:-10px;top:auto;bottom:0;background:var(--sun);opacity:.9;filter:none;border-radius:50%}
+.badge{border-radius:999px;padding:10px 18px 10px 10px}.badge .bm{width:42px;height:42px;border-radius:50%;background:var(--ice);display:grid;place-items:center;font-size:20px;flex:none}
+.badge.b2 .bm{background:#ffecec}
+.badge.b1{left:-20px;bottom:10%}.badge.b2{right:-20px;top:8%}
+.pet{position:absolute;border-radius:0 70% 0 70%;opacity:.85;animation:fl 8s ease-in-out infinite;z-index:1;pointer-events:none}
+.pet.p1{width:34px;height:34px;background:var(--coral);left:6%;top:22%}.pet.p2{width:22px;height:22px;background:var(--lime);left:44%;top:14%;animation-delay:-2s}
+.pet.p3{width:28px;height:28px;background:var(--sun);left:40%;bottom:14%;animation-delay:-4s}.pet.p4{width:18px;height:18px;background:var(--grape);right:6%;top:20%;animation-delay:-3s}.pet.p5{width:26px;height:26px;background:var(--lime);right:10%;bottom:12%;animation-delay:-5s}
+@keyframes fl{50%{transform:translateY(-18px) rotate(45deg)}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hv{width:min(84%,400px)}.pet.p2,.pet.p3{display:none}}
+.band{background:var(--lime);color:#21370a}.mq span{font-family:var(--serif)}.mq span:nth-child(even){color:var(--grape)}.mq i{background:var(--coral)}
+.band.tilt{background:var(--grape);color:#fff}.band.tilt .mq span:nth-child(even){color:var(--lime);opacity:1}.band.tilt .mq i{background:var(--sun)}
+.sobre{background:var(--ice)}
+.sobre .pic .im{border-radius:40px}.sobre .pic .im img{object-position:50% 20%}
+.sobre .pic .tag{background:var(--coral);border-radius:26px}.sobre .pic .tag q{font-family:var(--serif)}.sobre .pic .tag small{color:#fff}
+.fact{background:#fff;border-radius:22px}.fact .n{background:var(--grape);border-radius:50%}.fact .n svg{width:24px;height:24px}.fact:nth-child(2) .n{background:var(--lime)}.fact:nth-child(3) .n{background:var(--coral)}
+.areas{background:#fff}
+.ar-c{border-radius:28px}
+.ar-c:nth-child(4n+1){background:#ffecec}.ar-c:nth-child(4n+2){background:var(--sand2)}.ar-c:nth-child(4n+3){background:#f4e6f2}.ar-c:nth-child(4n){background:#fff3dc}
+.ar-c:hover{box-shadow:0 30px 50px -30px rgba(116,42,106,.4)}
+.ar-i{background:#fff;color:var(--grape);border-radius:50%}
+.ar-c h3{color:var(--grape)}.ar-n{font-weight:800}
+.quote{background:var(--grape)}.quote .eyb{color:var(--lime)}.qt{font-family:var(--serif)}.qt .wd.hl.on{color:var(--sun);font-style:italic}
+.quote .post{border-radius:36px;rotate:-3deg}
+.mulher{background:var(--paper)}
+.fz-c{background:#fff;border-radius:30px;box-shadow:0 20px 40px -30px rgba(116,42,106,.35)}
+.fz-c:nth-child(1) span{color:var(--coral)}.fz-c:nth-child(2) span{color:#5f9a1f}.fz-c:nth-child(3) span{color:var(--grape)}.fz-c:nth-child(4) span{color:var(--sun)}
+.fz-c span{font-family:var(--serif)}.fz-c b{font-family:var(--serif);color:var(--grape);font-size:26px}
+.endo{background:var(--lime);color:#1f3308;border-radius:30px}.endo b{font-family:var(--serif);font-size:28px;color:var(--grape)}
+.gal4 button{border-radius:30px}
+.prof,.posts .post{border-radius:28px}
+.ps{background:var(--grape)}.st .dot{box-shadow:0 0 0 8px var(--grape);background:var(--coral)}.st:nth-child(2) .dot{background:var(--lime);color:#1f3308}.st:nth-child(3) .dot{background:var(--sun);color:var(--grape)}
+.ps .btn.r{background:var(--lime);color:#1f3308}.ps .btn.r::before{background:#fff}
+.faq .qa button{font-family:var(--serif)}.qa.op button i{background:var(--coral)}
+.ct,.ft{background:#3d1438}.ct .btn.r{background:var(--lime);color:#1f3308}.ct .btn.r::before{background:#fff}
+.inf a,.inf div{border-radius:22px}.inf .ic{background:var(--lime);color:#1f3308;border-radius:50%}.inf div .ic{background:var(--coral);color:#fff}.inf .ic svg{width:21px;height:21px}
+.map{background:#541c4d;border-radius:30px}
+.ft .huge{font-family:var(--serif);font-style:italic;-webkit-text-stroke:0;color:rgba(255,255,255,.1);font-size:clamp(56px,12vw,190px)}.ft .huge em{color:rgba(140,198,63,.35);-webkit-text-stroke:0}
+.aib,.ai .h,.ai .b.us,.ai form button{background:var(--grape)}.aib i{border-color:var(--grape)}
+.prog{background:linear-gradient(90deg,var(--coral),var(--sun),var(--lime))}.cur{background:var(--coral)}.cur2.vw{background:var(--grape)}
+.mnav{background:var(--grape)}.mnav a.l em{color:var(--lime)}
+.hd.sc{background:rgba(255,255,255,.92)}
+main{display:flex;flex-direction:column}.hero{order:0}main>.band{order:1}#sobre{order:2}#mulher{order:3}#areas{order:4}#frase{order:5}main>.bandw{order:6}#instagram{order:7}#galeria{order:8}#agendar{order:9}#duvidas{order:10}#contato{order:11}
+@media(min-width:901px){.fz{grid-template-columns:1fr 1fr}.fz-c{display:grid;grid-template-columns:80px 1fr;align-items:center;column-gap:10px}.fz-c span{grid-row:span 2;margin:0;font-size:60px}.quote .g{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.quote .post{order:-1}.esp .top{text-align:left;margin-left:0}.esp .top .eyb{justify-content:flex-start}}
+</style>
+</head>
+<body class="lock">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.3-.3-.3-.5-.4Z"/></symbol>
+  <symbol id="i-ar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 11 21 3l-8 18-2-8-8-2Z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3ZM5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v9H6zM8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-hrt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></symbol>
+  <symbol id="i-chk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#3797f0"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m7.5 12.2 3 3 6-6.2"/></symbol>
+</svg>
+
+<div class="ld" id="ld" aria-hidden="true"><div class="in">
+  <img class="ld-logo" src="img/logo.png" alt="">
+  <div class="bar"><i id="ldb"></i></div><div class="pc" id="ldp">0%</div>
+</div></div>
+<div class="cur" id="cur"></div><div class="cur2" id="cur2"><span>ver</span></div>
+<div class="prog" id="prog"></div>
+<header class="hd" id="hd"><div class="wrap in">
+  <a class="brand" href="#topo" aria-label="Danielle Maria Lima, nutricionista"><span class="mk"><img src="img/marca.png" alt=""></span><span><b>Danielle Maria Lima</b><small>Nutricionista</small></span></a>
+  <nav class="nav" aria-label="Seções"><a href="#sobre">Sobre</a><a href="#areas">Áreas</a><a href="#mulher">Saúde da mulher</a><a href="#instagram">Instagram</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></nav>
+  <a class="btn r sm mag wa" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site e gostaria de agendar uma consulta."><svg><use href="#i-wa"/></svg>Agendar</a>
+  <button class="mbtn" id="mbtn" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i></button>
+</div></header>
+<nav class="mnav" id="mnav" aria-label="Menu">
+  <a class="l" href="#sobre">Sobre <em>a Danielle</em></a><a class="l" href="#areas">Áreas de atuação</a><a class="l" href="#mulher">Saúde da mulher</a><a class="l" href="#instagram">Instagram</a><a class="l" href="#duvidas">Dúvidas</a><a class="l" href="#contato"><em>Contato</em></a>
+  <div class="mft"><span>(87) 99616-7636</span><span>Nossa Senhora da Penha – PE</span></div>
+</nav>
+<main id="topo">
+<section class="hero" id="inicio">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <span class="pet p1"></span><span class="pet p2"></span><span class="pet p3"></span><span class="pet p4"></span><span class="pet p5"></span>
+  <div class="wrap">
+    <div class="tx">
+      <img class="hlogo rv" src="img/logo.png" alt="Danielle Maria Lima, nutricionista oncológica, clínica e fitoterapia">
+      <h1 id="h1"><span class="w"><span>Comer</span></span> <span class="w"><span>bem</span></span> <span class="w"><span>é</span></span> <span class="w"><span>um</span></span> <span class="w"><span>ato</span></span> <span class="w"><span>de</span></span> <span class="w"><span><em>cuidado.</em></span></span></h1>
+      <p class="lead rv d1">Nutrição oncológica, clínica, funcional e fitoterapia, com um plano alimentar feito para a sua rotina, seus gostos e seus objetivos.</p>
+      <div class="cta rv d2"><a class="btn r mag wa" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site e gostaria de agendar uma consulta."><svg><use href="#i-wa"/></svg>Agendar consulta</a><a class="btn o mag" href="#areas">O que eu faço <svg><use href="#i-ar"/></svg></a></div>
+    </div>
+    <div class="hv" id="hv"><div class="frame" id="frame">
+      <span class="arc"></span><span class="arc2"></span>
+      <div class="ph"><video id="hvid" autoplay muted loop playsinline preload="auto" poster="img/dani-branco-hero.jpg" aria-label="Danielle Maria Lima no consultório"><source src="img/dani-vivo.mp4" type="video/mp4"></video></div>
+      <div class="badge b1"><span class="bm">🍎</span><span><b>Plano personalizado</b><small>para a sua rotina</small></span></div>
+      <div class="badge b2"><span class="bm">🌿</span><span><b>Fitoterapia</b><small>com ciência</small></span></div>
+    </div></div>
+  </div>
+  <a class="scrl" href="#sobre">Role<i></i></a>
+</section>
+<div class="band" aria-hidden="true"><div class="mq" id="mq"></div></div>
+
+<section class="sec sobre" id="sobre"><div class="wrap g">
+  <div class="pic rv">
+    <div class="im mask"><img src="img/dani-mesa2.jpg" alt="Danielle Maria Lima no consultório" loading="lazy"></div>
+    <div class="tag"><q>Nutrir é cuidar, e cuidar é transformar!</q><small>Danielle Maria Lima</small></div>
+  </div>
+  <div>
+    <span class="eyb rv">Sobre</span>
+    <h2 class="h2 rv d1">Prazer, sou a <em>Danielle</em></h2>
+    <p class="rv d2">Sou nutricionista oncológica, clínica e fitoterapeuta (CRN-6 48006/P). Meu propósito vai além de orientar sobre alimentação: é cuidar de pessoas, promover saúde, prevenir doenças e incentivar escolhas que transformam o presente e constroem um futuro mais saudável.</p>
+    <p class="rv d2">Cada plano é feito para você, com ciência, empatia e propósito, em todas as fases da vida.</p>
+    <div class="facts">
+      <div class="fact rv d2"><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 0 3 1.5 3 3.5 0 2.5-3 6-3 6s-3-3.5-3-6C9 4.5 10 3 12 3ZM10 12l-4 9 3-1 1.5 2.5L13 15M14 12l4 9-3-1-1.5 2.5"/></svg></span><span><b>Nutricionista oncológica</b><span>Cuidado especializado em todas as etapas do tratamento.</span></span></div>
+      <div class="fact rv d3"><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18c0 5-4 8-9 8s-9-3-9-8ZM9 19l-1 2h8l-1-2M14 11l5-7"/></svg></span><span><b>Clínica e fitoterapia</b><span>Nutrição baseada em evidência, com o apoio das plantas.</span></span></div>
+      <div class="fact rv d4"><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v3H8zM6 5.5H5v15h14v-15h-1M9 11h6M9 15h4"/></svg></span><span><b>CRN-6 48006/P</b><span>Atendimento individualizado e plano alimentar personalizado.</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec areas" id="areas"><div class="wrap">
+  <div class="top"><span class="eyb rv">Áreas de atuação</span><h2 class="h2 rv d1">Cuidado nutricional <em>em todas as fases</em> da vida</h2><p class="lead rv d2">Mais do que alimentar, é cuidar de vidas. Conheça as áreas em que a Danielle atua.</p></div>
+  <div class="ar-g"><article class="ar-c rv "><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 0 3 1.5 3 3.5 0 2.5-3 6-3 6s-3-3.5-3-6C9 4.5 10 3 12 3ZM10 12l-4 9 3-1 1.5 2.5L13 15M14 12l4 9-3-1-1.5 2.5"/></svg></span><span class="ar-n">01</span><h3>Nutrição Oncológica</h3><p>Cuidado nutricional antes, durante e depois do tratamento do câncer.</p></article><article class="ar-c rv d1"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 20V9a6 6 0 0 1 12 0v11M12 9l2.5-2.5"/><circle cx="12" cy="9" r="1"/></svg></span><span class="ar-n">02</span><h3>Emagrecimento e Metabolismo</h3><p>Perda de peso com saúde, sem dietas da moda.</p></article><article class="ar-c rv d2"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-1.5-1.5-6-2-7 2.5S7 20 9.5 20c1.2 0 1.5-.6 2.5-.6s1.3.6 2.5.6C17 20 20 14 19 9.5S13.5 5.5 12 7ZM12 7c0-2 1-3.5 3-4"/></svg></span><span class="ar-n">03</span><h3>Nutrição Clínica</h3><p>Alimentação para prevenir e tratar doenças.</p></article><article class="ar-c rv d3"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15ZM5 19l8-8"/></svg></span><span class="ar-n">04</span><h3>Nutrição Funcional e Integrativa</h3><p>O corpo visto como um todo, com foco na causa.</p></article><article class="ar-c rv "><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18c0 5-4 8-9 8s-9-3-9-8ZM9 19l-1 2h8l-1-2M14 11l5-7"/></svg></span><span class="ar-n">05</span><h3>Fitoterapia</h3><p>Plantas medicinais com embasamento científico.</p></article><article class="ar-c rv d1"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></span><span class="ar-n">06</span><h3>Saúde da Mulher</h3><p>Hormônios, ciclo, gestação e menopausa.</p></article><article class="ar-c rv d2"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.4 12 20 12 20ZM8 12h2.5l1-2 2 4 1-2H16"/></svg></span><span class="ar-n">07</span><h3>Pré e pós-operatório</h3><p>Acompanhamento para uma recuperação melhor.</p></article><article class="ar-c rv d3"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8v8M3 10v4M18 8v8M21 10v4M6 12h12"/></svg></span><span class="ar-n">08</span><h3>Nutrição Esportiva</h3><p>Mais rendimento físico e mental.</p></article><article class="ar-c rv "><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M5 9h14M12 9v6M9 21l3-6 3 6"/></svg></span><span class="ar-n">09</span><h3>Avaliação Corporal</h3><p>Medidas e composição corporal acompanhadas de perto.</p></article><article class="ar-c rv d1"><span class="ar-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v3H8zM6 5.5H5v15h14v-15h-1M9 11h6M9 15h4"/></svg></span><span class="ar-n">10</span><h3>Plano alimentar personalizado</h3><p>Feito para a sua rotina, seus gostos e objetivos.</p></article></div>
+  <div class="cta rv" style="margin-top:44px"><a class="btn r mag wa" href="#" data-msg="Olá, Dra. Danielle! Gostaria de saber qual atendimento é ideal para mim."><svg><use href="#i-wa"/></svg>Qual é o ideal para mim?</a></div>
+</div></section>
+
+<section class="sec quote dark" id="frase"><div class="wrap g">
+  <div>
+    <span class="eyb">Nutrição que transforma e acolhe</span>
+    <p class="qt" id="qt" data-hl="é amor em cada escolha que faz a diferença.">A nutrição é ciência, é cuidado, é amor em cada escolha que faz a diferença.</p>
+    <div class="vals"><span><b>Acolhimento</b>Escuta e empatia em cada consulta</span><span><b>Evidência</b>Ciência e atualização em cada plano</span><span><b>Equilíbrio</b>Mais que resultados, qualidade de vida</span><span><b>Bem-estar</b>Cuidado integral para corpo, mente e emoções</span></div>
+  </div>
+  <div class="post rv" data-lb="1" data-cur="vw"><img src="img/dani-pe.jpg" alt="Danielle Maria Lima" loading="lazy"></div>
+</div></section>
+
+<section class="sec mulher" id="mulher"><div class="wrap">
+  <div class="top"><span class="eyb rv">Saúde da mulher</span><h2 class="h2 rv d1">Cuidar da alimentação é cuidar de você em <em>todas as fases</em></h2><p class="lead rv d2">Da adolescência à menopausa, uma alimentação equilibrada é essencial para viver com saúde, leveza e plenitude.</p></div>
+  <div class="fz">
+    <div class="fz-c rv"><span>01</span><b>Adolescência</b><p>Nutrição para crescer com saúde e autoestima.</p></div>
+    <div class="fz-c rv d1"><span>02</span><b>Fase fértil</b><p>Equilíbrio hormonal e energia para o dia a dia.</p></div>
+    <div class="fz-c rv d2"><span>03</span><b>Gestação</b><p>Cuidado dobrado para você e seu bebê.</p></div>
+    <div class="fz-c rv d3"><span>04</span><b>Menopausa</b><p>Qualidade de vida, ossos fortes e metabolismo ativo.</p></div>
+  </div>
+  <div class="endo rv"><div><b>Endometriose: muito além da dor</b><p>A nutrição auxilia com ação anti-inflamatória, saúde intestinal e equilíbrio hormonal. Cada mulher merece ser ouvida, acolhida e cuidada de forma integral. Você não está sozinha!</p></div><a class="btn r mag wa" href="#" data-msg="Olá, Dra. Danielle! Gostaria de saber sobre o acompanhamento na saúde da mulher."><svg><use href="#i-wa"/></svg>Quero me cuidar</a></div>
+</div></section>
+
+<div class="bandw"><div class="band tilt" aria-hidden="true"><div class="mq" id="mq2"></div></div></div>
+
+<section class="sec esp" id="galeria"><div class="wrap">
+  <div class="top"><span class="eyb rv">Consultório</span><h2 class="h2 rv d1">Um espaço pensado <em>para você</em></h2></div>
+  <div class="gal4">
+    <button class="rv" type="button" data-lb="0" data-cur="vw" aria-label="Ampliar foto"><img src="img/dani-mesa.jpg" alt="Danielle no consultório" loading="lazy"></button>
+    <button class="rv d1" type="button" data-lb="2" data-cur="vw" aria-label="Ampliar foto"><img src="img/dani-tablet.jpg" alt="Danielle com um tablet" loading="lazy"></button>
+    <button class="rv d2" type="button" data-lb="3" data-cur="vw" aria-label="Ampliar foto"><img src="img/dani-notebook.jpg" alt="Danielle no notebook" loading="lazy"></button>
+    <button class="rv d3" type="button" data-lb="4" data-cur="vw" aria-label="Ampliar foto"><img src="img/dani-xicara.jpg" alt="Danielle com uma xícara" loading="lazy"></button>
+  </div>
+</div></section>
+
+<section class="sec ig" id="instagram"><div class="wrap g">
+  <div>
+    <span class="eyb rv">Instagram</span><h2 class="h2 rv d1">Acompanhe <em>no Instagram</em></h2>
+    <p class="lead rv d2">Conteúdos sobre nutrição oncológica, fitoterapia, saúde da mulher e alimentação saudável.</p>
+    <a class="prof rv d3" href="https://www.instagram.com/dra.nutridaniellemaria/" target="_blank" rel="noopener" aria-label="Abrir o perfil @dra.nutridaniellemaria no Instagram">
+      <div class="row"><span class="ring"><img src="img/dani-vinho.jpg" alt="Foto de perfil de Danielle Maria Lima" loading="lazy"></span><span><span class="hn">dra.nutridaniellemaria</span><span class="nm">Danielle Maria Lima · Nutricionista</span></span></div>
+      <ul><li>Nutricionista oncológica, clínica e fitoterapia</li><li>CRN-6 48006/P</li><li>Nutrição que transforma. Cuidado que acolhe.</li></ul>
+      <div class="act"><span><svg width="18" height="18"><use href="#i-ig"/></svg>Ver perfil</span><span>@dra.nutridaniellemaria</span></div>
+    </a>
+  </div>
+  <div class="posts">
+    <a class="post tl rv" href="https://www.instagram.com/dra.nutridaniellemaria/" target="_blank" rel="noopener" aria-label="Ver publicações no Instagram"><div class="ph"><img src="img/post-fito.jpg" alt="Publicação sobre fitoterápicos" loading="lazy"></div><div class="bt"><img src="img/dani-vinho.jpg" alt=""><b>dra.nutridaniellemaria</b><svg><use href="#i-hrt"/></svg></div></a>
+    <a class="post tl rv d2" href="https://www.instagram.com/dra.nutridaniellemaria/" target="_blank" rel="noopener" aria-label="Ver publicações no Instagram"><div class="ph"><img src="img/post-endometriose.jpg" alt="Publicação sobre endometriose" loading="lazy"></div><div class="bt"><img src="img/dani-vinho.jpg" alt=""><b>dra.nutridaniellemaria</b><svg><use href="#i-hrt"/></svg></div></a>
+  </div>
+</div></section>
+
+<section class="sec ps dark" id="agendar"><div class="wrap">
+  <span class="eyb rv">Agenda aberta</span><h2 class="h2 rv d1">Como <em>agendar</em></h2>
+  <div class="steps">
+    <div class="st rv"><span class="dot">1</span><div><h3>Mande uma mensagem</h3><p>Chame pelo WhatsApp (87) 99616-7636 e conte o seu objetivo.</p></div></div>
+    <div class="st rv d1"><span class="dot">2</span><div><h3>Consulta e avaliação</h3><p>Escuta, avaliação corporal e entendimento da sua rotina.</p></div></div>
+    <div class="st rv d2"><span class="dot">3</span><div><h3>Seu plano</h3><p>Plano alimentar personalizado e acompanhamento.</p></div></div>
+  </div>
+  <div class="cta rv"><a class="btn r mag wa" href="#" data-msg="Olá, Dra. Danielle! Gostaria de agendar uma consulta."><svg><use href="#i-wa"/></svg>Agendar consulta</a><a class="btn ow mag" href="#duvidas">Tirar dúvidas</a></div>
+</div></section>
+
+<section class="sec faq" id="duvidas"><div class="wrap g">
+  <div><span class="eyb rv">Dúvidas</span><h2 class="h2 rv d1">Perguntas <em>frequentes</em></h2><p class="lead rv d2">Ficou com alguma dúvida? Pergunte ao assistente do site ou fale direto pelo WhatsApp.</p></div>
+  <div id="faq">
+    <div class="qa rv"><button type="button" aria-expanded="false">O que é nutrição oncológica?<i></i></button><div class="an"><div><p>É o cuidado nutricional de pessoas em tratamento de câncer ou que já passaram por ele, ajudando a manter a força, o peso e a qualidade de vida em cada etapa.</p></div></div></div>
+    <div class="qa rv"><button type="button" aria-expanded="false">Como funciona a primeira consulta?<i></i></button><div class="an"><div><p>A Danielle escuta sua história, entende sua rotina e seus objetivos e faz a avaliação corporal. A partir disso, monta um plano alimentar personalizado.</p></div></div></div>
+    <div class="qa rv"><button type="button" aria-expanded="false">A fitoterapia é segura?<i></i></button><div class="an"><div><p>Quando indicada por um profissional, sim. Os fitoterápicos são usados com embasamento científico e de forma individualizada.</p></div></div></div>
+    <div class="qa rv"><button type="button" aria-expanded="false">Atende para emagrecimento?<i></i></button><div class="an"><div><p>Sim. O foco é emagrecer com saúde, cuidando do metabolismo, sem dietas da moda.</p></div></div></div>
+    <div class="qa rv"><button type="button" aria-expanded="false">Quais são os valores?<i></i></button><div class="an"><div><p>Valores e formas de pagamento são informados diretamente pelo WhatsApp (87) 99616-7636.</p></div></div></div>
+    <div class="qa rv"><button type="button" aria-expanded="false">Onde fica o consultório?<i></i></button><div class="an"><div><p>Na Rua Jacinto Alves de Carvalho, 575, Nossa Senhora da Penha – PE. O mapa e as rotas estão logo abaixo.</p></div></div></div>
+  </div>
+</div></section>
+
+<section class="sec ct dark" id="contato"><div class="wrap g">
+  <div>
+    <span class="eyb rv">Contato</span><h2 class="rv d1">Agende sua <em>consulta!</em></h2>
+    <p class="lead rv d2">Nutrição que transforma. Cuidado que acolhe.</p>
+    <div class="inf">
+      <a class="wa rv d2" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site."><span class="ic"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><b>(87) 99616-7636</b></span></a>
+      <a class="rv d3" href="mailto:danielle.3.maria@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg></span><span><small>E-mail</small><b>danielle.3.maria@gmail.com</b></span></a>
+      <div class="rv d3"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Endereço</small><b>Rua Jacinto Alves de Carvalho, 575 · Nossa Senhora da Penha – PE</b></span></div>
+      <a class="rv d4" href="https://www.instagram.com/dra.nutridaniellemaria/" target="_blank" rel="noopener"><span class="ic" style="background:linear-gradient(135deg,#fa7e1e,#d62976,#962fbf);color:#fff"><svg><use href="#i-ig"/></svg></span><span><small>Instagram</small><b>@dra.nutridaniellemaria</b></span></a>
+    </div>
+    <div class="cta rv">
+      <a class="btn r mag wa" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site e gostaria de agendar uma consulta."><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      <a class="btn ow mag" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Jacinto+Alves+de+Carvalho,+575,+Nossa+Senhora+da+Penha+-+PE" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Google Maps</a>
+      <a class="btn ow mag" href="https://waze.com/ul?q=Rua%20Jacinto%20Alves%20de%20Carvalho%20575%20Nossa%20Senhora%20da%20Penha%20PE&amp;navigate=yes" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Waze</a>
+    </div>
+  </div>
+  <div class="map rv d1"><iframe title="Mapa do consultório de Danielle Maria Lima" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rua+Jacinto+Alves+de+Carvalho,+575,+Nossa+Senhora+da+Penha+-+PE&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+<footer class="ft dark"><div class="wrap">
+  <div class="huge" aria-hidden="true">nutrir é <em>cuidar</em></div>
+  <div class="cols">
+    <div><img class="flogo" src="img/logo-branco.png" alt="Danielle Maria Lima, nutricionista oncológica, clínica e fitoterapia"></div>
+    <div><b>Navegue</b><a href="#sobre">Sobre</a><a href="#areas">Áreas de atuação</a><a href="#mulher">Saúde da mulher</a><a href="#instagram">Instagram</a><a href="#duvidas">Dúvidas</a></div>
+    <div><b>Contato</b><a class="wa" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site.">(87) 99616-7636</a><a href="mailto:danielle.3.maria@gmail.com">danielle.3.maria@gmail.com</a><a href="https://www.instagram.com/dra.nutridaniellemaria/" target="_blank" rel="noopener">@dra.nutridaniellemaria</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Jacinto+Alves+de+Carvalho,+575,+Nossa+Senhora+da+Penha+-+PE" target="_blank" rel="noopener">Rua Jacinto Alves de Carvalho, 575</a></div>
+  </div>
+  <p class="cvv">Este site tem caráter informativo e não substitui uma consulta. Em caso de emergência, ligue para o SAMU 192. Se precisar de apoio emocional, o CVV atende 24h pelo 188.</p>
+  <div class="cp"><span>© <span id="yr"></span> Danielle Maria Lima · Nutricionista · CRN-6 48006/P</span><span>Nossa Senhora da Penha – PE</span></div>
+</div></footer>
+<div class="lb" id="lb" role="dialog" aria-label="Foto ampliada" aria-hidden="true"><button class="x" type="button" aria-label="Fechar">×</button><button class="pv" type="button" aria-label="Anterior">‹</button><img id="lbi" alt=""><button class="nx" type="button" aria-label="Próxima">›</button></div>
+<div class="fimg" id="fimg"><img alt="" id="fimgi"></div>
+<a class="waf wa" href="#" data-msg="Olá, Dra. Danielle! Encontrei seu site e gostaria de mais informações." aria-label="Conversar pelo WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<button class="aib" id="aib" type="button" aria-label="Abrir assistente virtual"><img src="img/dani-vinho.jpg" alt=""><i></i><span>Tire suas dúvidas</span></button>
+<div class="tip" id="tip" role="status">Olá! Quer saber qual atendimento é ideal para você? Posso ajudar.<button type="button" aria-label="Fechar aviso">×</button></div>
+<div class="ai" id="ai" role="dialog" aria-label="Assistente virtual">
+  <div class="h"><img src="img/dani-vinho.jpg" alt=""><span><b>Assistente virtual</b><small>Nutricionista Danielle Maria Lima</small></span><button type="button" id="aix" aria-label="Fechar assistente">×</button></div>
+  <div class="m" id="aim" aria-live="polite"></div><div class="sg" id="aisg"></div>
+  <form id="aif" autocomplete="off"><input id="aii" maxlength="300" placeholder="Escreva sua dúvida…" aria-label="Sua dúvida"><button type="submit" aria-label="Enviar"><svg><use href="#i-send"/></svg></button></form>
+</div>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const WA='5587996167636';
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+$('#yr').textContent=new Date().getFullYear();
+(function(){const v=$('#hvid');if(!v)return;if(RM){v.removeAttribute('autoplay');v.pause();return}const p=()=>{const r=v.play();if(r&&r.catch)r.catch(()=>{})};p();document.addEventListener('visibilitychange',()=>{if(!document.hidden)p()});})();
+$$('#h1 .w>span').forEach((s,i)=>s.style.transitionDelay=(.12+i*.08)+'s');
+
+/* WhatsApp */
+function waUrl(m){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(m||'Olá, Dra. Danielle! Encontrei seu site.')}
+function bindWa(root){(root||document).querySelectorAll('a.wa').forEach(a=>{a.href=waUrl(a.dataset.msg);a.target='_blank';a.rel='noopener'})}
+bindWa();
+
+/* faixas */
+function fill(el,words){const h=words.map(w=>'<span>'+w+'<i></i></span>').join('');el.innerHTML=h+h}
+fill($('#mq'),['Nutrição oncológica','Fitoterapia','Saúde da mulher','Emagrecimento','Nutrição clínica','Plano personalizado']);
+fill($('#mq2'),['Nutrir é cuidar','cuidar é transformar','Nutrir é cuidar','cuidar é transformar']);
+
+/* loader 0–100% */
+(function(){
+  const ld=$('#ld'),b=$('#ldb'),p=$('#ldp');const imgs=[...document.images].filter(i=>!i.loading||i.loading!=='lazy').slice(0,4);
+  let loaded=0,shown=0;const total=Math.max(imgs.length,1);
+  imgs.forEach(i=>{if(i.complete)loaded++;else{i.addEventListener('load',()=>loaded++,{once:true});i.addEventListener('error',()=>loaded++,{once:true})}});
+  const t0=performance.now(),MIN=RM?200:1700,MAX=6000;
+  function step(t){const el=t-t0;const real=loaded/total;const tm=Math.min(el/MIN,1);let tgt=Math.min(real,tm)*100;if(el>MAX)tgt=100;
+    shown+=(tgt-shown)*.12;if(tgt>=100&&shown>99.4)shown=100;const v=Math.round(shown);b.style.width=v+'%';p.textContent=v+'%';
+    if(v<100)requestAnimationFrame(step);else setTimeout(done,250)}
+  function done(){ld.classList.add('out');document.body.classList.remove('lock');document.documentElement.classList.add('go');document.body.classList.add('go');setTimeout(()=>ld.remove(),1200);setTimeout(()=>{const t=$('#tip');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),9000)},4200)}
+  requestAnimationFrame(step);
+})();
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target._m.classList.add('in');io2.unobserve(e.target)}}),{threshold:.12});
+$$('.mask').forEach(el=>{const p=el.parentElement;p._m=el;io2.observe(p)});
+
+/* cursor */
+if(FINE&&!RM){
+  const c=$('#cur'),c2=$('#cur2');let x=-100,y=-100,x2=-100,y2=-100;
+  addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;c.style.transform='translate3d('+x+'px,'+y+'px,0)'},{passive:true});
+  (function loop(){x2+=(x-x2)*.16;y2+=(y-y2)*.16;c2.style.transform='translate3d('+x2+'px,'+y2+'px,0)';requestAnimationFrame(loop)})();
+  document.addEventListener('mouseover',e=>{const t=e.target.closest('[data-cur="vw"]');const l=e.target.closest('a,button,.it');c2.classList.toggle('vw',!!t);c2.classList.toggle('lk',!t&&!!l)});
+  /* botões magnéticos */
+  $$('.mag').forEach(m=>{m.addEventListener('mousemove',e=>{const r=m.getBoundingClientRect();m.style.transform='translate('+((e.clientX-r.left-r.width/2)*.22)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});m.addEventListener('mouseleave',()=>{m.style.transform=''})});
+  /* inclinação da foto do topo */
+  const hv=$('#hv')||document.createElement('div'),fr=$('#frame')||document.createElement('div');hv.addEventListener('mousemove',e=>{const r=hv.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;fr.style.transform='rotateY('+(px*10)+'deg) rotateX('+(-py*8)+'deg)'});hv.addEventListener('mouseleave',()=>{fr.style.transform=''});
+  /* posts com inclinação */
+  $$('.tl').forEach(t=>{t.addEventListener('mousemove',e=>{const r=t.getBoundingClientRect();const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;t.style.transform='rotateY('+(px*12)+'deg) rotateX('+(-py*10)+'deg) translateZ(10px)'});t.addEventListener('mouseleave',()=>{t.style.transform=''})});
+  /* foto que segue o mouse na lista */
+  const fi=$('#fimg'),fii=$('#fimgi');let fx=0,fy=0,tx=0,ty=0,on=false;
+  $$('#qlist .it').forEach(it=>{it.addEventListener('mouseenter',()=>{fii.src=it.dataset.img;fi.classList.add('on');on=true});it.addEventListener('mouseleave',()=>{fi.classList.remove('on');on=false})});
+  addEventListener('mousemove',e=>{tx=e.clientX+30;ty=e.clientY-150},{passive:true});
+  (function fl(){fx+=(tx-fx)*.12;fy+=(ty-fy)*.12;fi.style.transform='translate3d('+fx+'px,'+fy+'px,0) rotate('+((tx-fx)*.03)+'deg)';requestAnimationFrame(fl)})();
+}
+
+/* rede animada no topo (como o logo) */
+(function(){
+  const cv=$('#net'),ctx=cv.getContext('2d');let W,H,DPR,pts=[],mx=-9999,my=-9999,vis=true;
+  const COLS=['#8cc63f','#f06b6b','#742a6a','#f6b23b'];
+  function init(){DPR=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
+    const n=Math.round(Math.min(64,Math.max(22,W*H/26000)));pts=[];for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*2.6+2,c:COLS[i%3]})}
+  function draw(){if(!vis){requestAnimationFrame(draw);return}ctx.clearRect(0,0,W,H);const D=W<700?110:150;
+    for(const p of pts){if(!RM){p.x+=p.vx;p.y+=p.vy}if(p.x<-20)p.x=W+20;if(p.x>W+20)p.x=-20;if(p.y<-20)p.y=H+20;if(p.y>H+20)p.y=-20;
+      const dx=mx-p.x,dy=my-p.y,d=Math.hypot(dx,dy);if(d<200&&d>1){p.x+=dx/d*.6;p.y+=dy/d*.6}}
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j];const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<D){ctx.strokeStyle='rgba(116,42,106,'+(1-d/D)*.22+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}
+    for(const p of pts){const d=Math.hypot(mx-p.x,my-p.y);if(d<220){ctx.strokeStyle='rgba(240,107,107,'+(1-d/220)*.35+')';ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mx,my);ctx.stroke()}
+      ctx.fillStyle=p.c;ctx.globalAlpha=.75;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();ctx.globalAlpha=1}
+    requestAnimationFrame(draw)}
+  init();addEventListener('resize',()=>{clearTimeout(cv._t);cv._t=setTimeout(init,200)});
+  const hero=$('#inicio');hero.addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});hero.addEventListener('mouseleave',()=>{mx=my=-9999});
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting}).observe(hero);draw();
+})();
+
+/* frase iluminada com a rolagem */
+(function(){
+  const q=$('#qt');const hl=q.dataset.hl.split(' ');const ws=q.textContent.trim().split(/\s+/);const start=ws.length-hl.length;
+  q.innerHTML=ws.map((w,i)=>'<span class="wd'+(i>=start?' hl':'')+'">'+w+'</span>').join(' ');const sp=[...q.querySelectorAll('.wd')];
+  function up(){const r=q.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight*.85-r.top)/(r.height+innerHeight*.35)));const n=Math.round(p*sp.length);sp.forEach((s,i)=>s.classList.toggle('on',i<n))}
+  addEventListener('scroll',up,{passive:true});up();
+})();
+
+/* trilha horizontal */
+(function(){
+  const hz=$('#hz'),tr=$('#track'),bar=$('#hzb');if(!hz)return;const mq=matchMedia('(min-width:901px)');
+  function size(){if(!mq.matches){hz.style.height='';tr.style.transform='';return}const ex=tr.scrollWidth-innerWidth;hz.style.height=(innerHeight+Math.max(0,ex))+'px'}
+  function up(){if(!mq.matches)return;const r=hz.getBoundingClientRect();const ex=tr.scrollWidth-innerWidth;const p=Math.min(1,Math.max(0,-r.top/(hz.offsetHeight-innerHeight||1)));tr.style.transform='translate3d('+(-ex*p)+'px,0,0)';bar.style.width=(p*100)+'%'}
+  addEventListener('resize',()=>{size();up()});addEventListener('scroll',up,{passive:true});addEventListener('load',()=>{size();up()});size();up();
+})();
+
+/* header, progresso, menu ativo, parallax */
+(function(){
+  const hd=$('#hd'),pg=$('#prog');let last=0;const secs=['sobre','areas','mulher','instagram','duvidas','contato'].map(id=>document.getElementById(id));const links=$$('.nav a');
+  const par=$$('[data-par]');
+  function up(){const y=scrollY;hd.classList.toggle('sc',y>30);hd.classList.toggle('hide',y>last&&y>500&&!document.body.classList.contains('mopen'));last=y;
+    pg.style.transform='scaleX('+(y/(document.documentElement.scrollHeight-innerHeight||1))+')';
+    let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+    if(!RM)par.forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const p=(r.top+r.height/2-innerHeight/2)/innerHeight;im.style.transform='translate3d(0,'+(p*parseFloat(im.dataset.par)*-100)+'%,0)'})}
+  addEventListener('scroll',up,{passive:true});up();
+  const mb=$('#mbtn');mb.addEventListener('click',()=>{const o=document.body.classList.toggle('mopen');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');document.body.style.overflow=o?'hidden':''});
+  $$('#mnav a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('mopen');document.body.style.overflow='';mb.setAttribute('aria-expanded','false')}));
+})();
+
+/* galeria */
+(function(){
+  const L=['img/dani-mesa.jpg','img/dani-pe.jpg','img/dani-tablet.jpg','img/dani-notebook.jpg','img/dani-xicara.jpg'];
+  const lb=$('#lb'),im=$('#lbi');let k=0;
+  function show(i){k=(i+L.length)%L.length;im.src=L[k];im.alt='Foto '+(k+1)+' de Danielle Maria Lima'}
+  function open(i){show(i);lb.classList.add('on');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  function close(){lb.classList.remove('on');lb.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  $$('[data-lb]').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.lb)));
+  lb.querySelector('.x').onclick=close;lb.querySelector('.pv').onclick=()=>show(k-1);lb.querySelector('.nx').onclick=()=>show(k+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(k-1);if(e.key==='ArrowRight')show(k+1)});
+  let sx=0;lb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(k+(d<0?1:-1))});
+})();
+
+/* perguntas */
+$$('#faq .qa').forEach(q=>{const b=q.querySelector('button');b.addEventListener('click',()=>{const o=!q.classList.contains('op');$$('#faq .qa').forEach(x=>{x.classList.remove('op');x.querySelector('button').setAttribute('aria-expanded','false')});if(o){q.classList.add('op');b.setAttribute('aria-expanded','true')}})});
+
+/* assistente virtual */
+(function(){
+  const ai=$('#ai'),m=$('#aim'),f=$('#aif'),inp=$('#aii'),sg=$('#aisg'),tip=$('#tip');
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const W=(t,msg)=>'<br><a class="w" target="_blank" rel="noopener" href="'+waUrl(msg)+'">'+t+'</a>';
+  const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const RISK=['suicid','me matar','matar','morrer','quero morrer','tirar minha vida','tirar a vida','acabar com tudo','nao aguento mais','me cortar','cortar os pulsos','autolesao','me machucar','sumir de vez','desistir de viver','overdose'];
+  const KB=[
+   {k:['oncologica','oncologia','cancer','quimio','radio','tumor'],a:'A Danielle é <b>nutricionista oncológica</b>: cuida da alimentação antes, durante e depois do tratamento do câncer, ajudando a manter força e qualidade de vida.'+W('Agendar consulta','Olá, Dra. Danielle! Gostaria de uma consulta de nutrição oncológica.')},
+   {k:['emagrecer','emagrecimento','peso','dieta','gordura','metabolismo','obesidade'],a:'Sim! Ela atende <b>emagrecimento e metabolismo</b>, com foco em perder peso com saúde, sem dietas da moda.'+W('Quero emagrecer','Olá, Dra. Danielle! Quero emagrecer com saúde.')},
+   {k:['fito','fitoterapia','fitoterapico','planta','cha','natural'],a:'A <b>fitoterapia</b> usa plantas medicinais com embasamento científico, de forma individualizada.'+W('Saber mais','Olá, Dra. Danielle! Gostaria de saber sobre fitoterapia.')},
+   {k:['mulher','hormonio','menopausa','gestante','gravida','gestacao','endometriose','ciclo','tpm','fertil','engravidar'],a:'Na <b>saúde da mulher</b>, a Danielle acompanha todas as fases: adolescência, fase fértil, gestação e menopausa, além de casos como endometriose.'+W('Quero me cuidar','Olá, Dra. Danielle! Gostaria de saber sobre saúde da mulher.')},
+   {k:['cirurgia','operatorio','bariatrica','pos'],a:'Ela faz <b>acompanhamento em pré e pós-operatório</b>, para uma recuperação melhor.'+W('Saber mais','Olá, Dra. Danielle! Vou fazer uma cirurgia e gostaria de acompanhamento.')},
+   {k:['esporte','esportiva','academia','treino','massa','hipertrofia','rendimento'],a:'Atende <b>nutrição esportiva</b>, para mais rendimento físico e mental.'+W('Saber mais','Olá, Dra. Danielle! Gostaria de nutrição esportiva.')},
+   {k:['avaliacao','bioimpedancia','medidas','composicao'],a:'A consulta inclui <b>avaliação corporal</b> para acompanhar sua evolução de perto.'},
+   {k:['plano','cardapio','alimentar','funcional','integrativa','clinica'],a:'O <b>plano alimentar é personalizado</b>, feito para sua rotina, gostos e objetivos.'+W('Quero meu plano','Olá, Dra. Danielle! Quero um plano alimentar personalizado.')},
+   {k:['online','on-line','distancia','video'],a:'Sobre atendimento on-line, confirme direto pelo WhatsApp.'+W('Perguntar','Olá, Dra. Danielle! Você atende on-line?')},
+   {k:['preco','valor','valores','quanto','custa','pagamento','pix','convenio','plano de saude'],a:'Valores e formas de pagamento são informados diretamente pelo WhatsApp.'+W('Perguntar valores','Olá, Dra. Danielle! Gostaria de saber os valores da consulta.')},
+   {k:['horario','agendar','marcar','consulta','vaga','agenda'],a:'A <b>agenda está aberta</b>! Agende pelo WhatsApp <b>(87) 99616-7636</b>.'+W('Agendar agora','Olá, Dra. Danielle! Gostaria de agendar uma consulta.')},
+   {k:['onde','endereco','fica','local','rua','chegar','mapa','rota','penha'],a:'Rua Jacinto Alves de Carvalho, 575 · Nossa Senhora da Penha – PE. O mapa e os botões do Google Maps e do Waze estão no fim da página.'},
+   {k:['crn','registro','quem','danielle','formacao'],a:'Danielle Maria Lima é <b>nutricionista oncológica, clínica e fitoterapia</b>, <b>CRN-6 48006/P</b>.'},
+   {k:['instagram','insta'],a:'Siga <b>@dra.nutridaniellemaria</b>.<br><a class="t" target="_blank" rel="noopener" href="https://www.instagram.com/dra.nutridaniellemaria/">Abrir Instagram</a>'},
+   {k:['email','e-mail'],a:'E-mail: <b>danielle.3.maria@gmail.com</b>'},
+   {k:['contato','telefone','whatsapp','numero','zap'],a:'WhatsApp: <b>(87) 99616-7636</b>'+W('Abrir WhatsApp','Olá, Dra. Danielle! Encontrei seu site.')},
+  ];
+  function bot(h,cls){const d=document.createElement('div');d.className='b '+(cls||'bo');d.innerHTML=h;m.appendChild(d);m.scrollTop=m.scrollHeight}
+  function user(t){const d=document.createElement('div');d.className='b us';d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight}
+  function reply(t){const n=norm(t);
+    if(RISK.some(r=>n.includes(r))){return bot('Sinto muito que você esteja passando por isso. Você não precisa enfrentar esse momento sozinho(a). <b>Ligue agora para o CVV 188</b> (24h, gratuito) ou, em risco imediato, para o <b>SAMU 192</b>.<br><a class="t" href="tel:188">Ligar 188</a><a class="t" href="tel:192">Ligar 192</a>','al')}
+    let best=null,sc=0;KB.forEach(e=>{const s=e.k.filter(k=>n.includes(k)).length;if(s>sc){sc=s;best=e}});
+    bot(best?best.a:'Não encontrei essa informação aqui. Pergunte direto pelo WhatsApp:'+W('Perguntar','Olá, Dra. Danielle! Tenho uma dúvida: '+t))}
+  function ask(t){t=t.trim().slice(0,300);if(!t)return;user(t);const ty=document.createElement('div');ty.className='b bo ty';ty.innerHTML='<span></span><span></span><span></span>';m.appendChild(ty);m.scrollTop=m.scrollHeight;setTimeout(()=>{ty.remove();reply(t)},650)}
+  ['Nutrição oncológica','Emagrecimento','Saúde da mulher','Como agendar?','Onde fica?'].forEach(s=>{const b=document.createElement('button');b.type='button';b.textContent=s;b.onclick=()=>ask(s);sg.appendChild(b)});
+  let started=false;
+  function open(){ai.classList.add('on');tip.classList.remove('on');if(!started){started=true;bot('Olá! Sou o assistente do site da nutricionista <b>Danielle Maria Lima</b>. Posso falar sobre as <b>áreas de atuação</b>, como <b>agendar</b> ou onde fica o consultório.')}setTimeout(()=>inp.focus(),300)}
+  function close(){ai.classList.remove('on')}
+  $('#aib').addEventListener('click',()=>ai.classList.contains('on')?close():open());$('#aix').addEventListener('click',close);
+  tip.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){tip.classList.remove('on');return}open()});
+  f.addEventListener('submit',e=>{e.preventDefault();ask(inp.value);inp.value=''});
+  addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
+})();
+</script>
+</body>
+</html>
